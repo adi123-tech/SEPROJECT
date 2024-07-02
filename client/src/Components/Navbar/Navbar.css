@@ -1,0 +1,60 @@
+/* Navbar.css */
+nav {
+    background-color: #FFFFFF;
+    color: black;
+    padding: 10px;
+    display: flex;
+    align-items: center; /* Vertically center content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    height: 70px;
+    margin-right: auto; /* Push the logo to the left */
+    margin-left: 120px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 50px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    position: relative; /* Required for pseudo-elements */
+    display: inline-block; /* Display inline block */
+    font-size: 20px;
+}
+
+nav ul li a::after {
+    content: ''; /* Add content after the element */
+    position: absolute; /* Position absolute for pseudo-element */
+    width: 100%; /* Full width */
+    transform: scaleX(0); /* Initial scale of 0 for underline effect */
+    height: 2px; /* Height of the underline */
+    bottom: 0; /* Align to bottom */
+    left: 0; /* Align to left */
+    background-color: #5B26E6; /* Background color of the underline */
+    transform-origin: bottom right; /* Set transform origin */
+    transition: transform 0.25s ease-out; /* Transition effect for the underline */
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1); /* Scale the underline on hover */
+    transform-origin: bottom left; /* Set transform origin */
+}
+
+.logout-button{
+    position: relative;
+    z-index: 20;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    color: red;
+}

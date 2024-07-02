@@ -1,0 +1,91 @@
+.base-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.form-container h2 {
+  margin-bottom: 30px;
+  text-align: center;
+  color: #333333;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.txt_field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.txt_field input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.txt_field input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.txt_field span {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  color: #adadad;
+  font-size: 16px;
+  transition: top 0.3s ease, color 0.3s ease;
+  pointer-events: none;
+}
+
+.txt_field input:focus ~ span,
+.txt_field input:valid ~ span {
+  top: -10px;
+  color: #2691d9;
+}
+
+.form-container button {
+  padding: 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+.form-container p {
+  margin-top: 20px;
+  text-align: center;
+  color: #888888;
+}
+
+.form-container p a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.form-container p a:hover {
+  color: #0056b3;
+}
