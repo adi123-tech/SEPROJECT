@@ -18,7 +18,7 @@ function Profile() {
     // Fetch user data when component mounts
     const fetchUserData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/user/${userId}`);
+        const response = await fetch(`https://seproject-edbi.onrender.com/user/${userId}`);
         const userData = await response.json();
 
         setName(userData.fullName || '');
@@ -38,7 +38,7 @@ function Profile() {
     // Fetch user activities
     const fetchUserActivities = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/user-activities/${userId}`);
+        const response = await axios.get(`https://seproject-edbi.onrender.com/user-activities/${userId}`);
         setActivities(response.data.activities || []);
       } catch (error) {
         console.error('Error fetching user activities:', error);
