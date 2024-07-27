@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // MongoDB connection
-mongoose.connect("mongodb+srv://aditya:mrnobody@cluster0.mi6ycbi.mongodb.net/Software", {
+mongoose.connect("mongodb+srv://Aditya:mrnobody@cluster0.9ex6qts.mongodb.net/Software", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => console.log('MongoDB connected'))
