@@ -45,7 +45,7 @@ function Home() {
     // Fetch stars_int data from the server
     const fetchStarsIntData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/stars-int/${userId}`);
+        const response = await axios.get(`https://seproject-edbi.onrender.com/stars-int/${userId}`);
         const starsData = response.data; // Received stars_int data array
         const starsIntMap = {}; // Create a map to store stars_int data for each courseId
         starsData.forEach(courseStars => {
@@ -101,7 +101,7 @@ function Home() {
         updatedLike = newData.like; // Preserve existing like value if not liking
       }
   
-      const response = await axios.post(`http://localhost:5000/update-interaction/${userId}`, {
+      const response = await axios.post(`https://seproject-edbi.onrender.com/update-interaction/${userId}`, {
         ...newData,
         stars_int: parseInt(newData.stars), 
         stars: updatedStars,
